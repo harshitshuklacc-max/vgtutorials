@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-navy: #07152F;
+    --color-navy-dark: #040D1D;
+    --color-royal: #145DFF;
+    --color-electric: #38BDF8;
+    --color-sky: #8BD9FF;
+    --color-ice: #EFF7FF;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: #07152F;
+    color: #F1F5F9;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Custom scrollbar for deep blue aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #040D1D;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E3A8A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #145DFF;
+}
+
+/* Glassmorphism utility helpers */
+.glass-panel {
+  background: rgba(15, 29, 64, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(20, 45, 95, 0.5) 0%, rgba(7, 21, 47, 0.7) 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 16px 40px -10px rgba(20, 93, 255, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+.blue-glow {
+  box-shadow: 0 0 35px rgba(20, 93, 255, 0.35);
+}
+
+.blue-glow-subtle {
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+}
